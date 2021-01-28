@@ -6,7 +6,7 @@ RUN     export DEBIAN_FRONTEND=noninteractive && \
         apt-get upgrade -y && \
 	# install opencl and some other dependencies \
         apt-get install -y --no-install-recommends \
-                apt-transport-https ca-certificates clinfo libssl-dev ocl-icd-libopencl1 ocl-icd-opencl-dev beignet pocl-opencl-icd && \
+                apt-transport-https ca-certificates clinfo libssl-dev ocl-icd-libopencl1 ocl-icd-opencl-dev beignet && \
 	# see https://gitlab.com/nvidia/opencl/blob/ubuntu16.04/runtime/Dockerfile
         mkdir -p /etc/OpenCL/vendors && \
         # get Mono https://www.mono-project.com/download/stable/ \
