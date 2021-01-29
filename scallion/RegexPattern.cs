@@ -55,7 +55,7 @@ namespace scallion
                 _outputLength = outputLength;
 
                 // check for invalid characters in given regex
-                Regex invalidMarkupRegex = new Regex("[^" + validCharacters + @"\^\$\[\]\.\\]\(\)");
+                Regex invalidMarkupRegex = new Regex("[^" + validCharacters + @"\^\$\[\]\.\\]");
                 var invalidMatch = invalidMarkupRegex.Match(regex);
                 if (invalidMatch.Success)
                     throw new ApplicationException(string.Format("Unsupported character in Regex: '{0}'",
